@@ -2,908 +2,1128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Braids_by_Kp – Hair Services & Wigs</title>
-    <meta name="description"
-        content="Premium braiding, hair services and luxury wigs by Braids_by_Kp. Book your appointment or shop wigs online." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Braids_by_Kp – Hair Services & Wigs</title>
+  <meta name="description"
+    content="Premium braiding, hair services and luxury wigs by Braids_by_Kp. Book your appointment or shop wigs online." />
 
-    <!-- Tailwind CSS + Custom Theme -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        display: ['"Cormorant Garamond"', 'serif'],
-                        body: ['"DM Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        cream: '#faf7f2',
-                        blush: '#f0ddd5',
-                        rose: '#c9897a',
-                        'rose-dark': '#a3655a',
-                        taupe: '#8c7b72',
-                        ink: '#2e2420',
-                    },
-                    keyframes: {
-                        fadeUp: {
-                            '0%': { opacity: '0', transform: 'translateY(28px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    },
-                    animation: {
-                        'fade-up-1': 'fadeUp .55s ease .05s both',
-                        'fade-up-2': 'fadeUp .55s ease .12s both',
-                        'fade-up-3': 'fadeUp .55s ease .19s both',
-                        'fade-up-4': 'fadeUp .55s ease .26s both',
-                        'fade-up-5': 'fadeUp .55s ease .33s both',
-                        'fade-up-6': 'fadeUp .55s ease .40s both',
-                        'fade-up-7': 'fadeUp .55s ease .47s both',
-                        'fade-up-8': 'fadeUp .55s ease .54s both',
-                        // additional animations for up to 22 items (cycle through 1-8)
-                    },
-                    boxShadow: {
-                        card: '0 2px 12px rgba(46,36,32,.07)',
-                        'card-hover': '0 16px 40px rgba(46,36,32,.14)',
-                    },
-                }
-            }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          },
+          colors: {
+            cream: '#faf7f2',
+            blush: '#f0ddd5',
+            rose: '#c9897a',
+            'rose-dark': '#a3655a',
+            taupe: '#8c7b72',
+            ink: '#2e2420',
+          },
+          boxShadow: {
+            card: '0 2px 12px rgba(46,36,32,.07)',
+            'card-hover': '0 16px 40px rgba(46,36,32,.14)',
+          },
         }
-    </script>
+      }
+    }
+  </script>
 
-    <style>
-        body {
-            font-family: 'DM Sans', sans-serif;
-        }
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
 
-        .hero-bg {
-            background:
-                linear-gradient(160deg, rgba(240, 221, 213, .55) 0%, transparent 60%),
-                linear-gradient(340deg, rgba(201, 137, 122, .18) 0%, transparent 55%),
-                #faf7f2;
-        }
+    /* Hero */
+    .hero-bg {
+      background:
+        linear-gradient(160deg, rgba(240, 221, 213, .55) 0%, transparent 60%),
+        linear-gradient(340deg, rgba(201, 137, 122, .18) 0%, transparent 55%),
+        #faf7f2;
+    }
 
-        .hero-circle-tr {
-            background: radial-gradient(circle, rgba(201, 137, 122, .14) 0%, transparent 70%);
-        }
+    .hero-circle-tr {
+      background: radial-gradient(circle, rgba(201, 137, 122, .14) 0%, transparent 70%);
+    }
 
-        .hero-circle-bl {
-            background: radial-gradient(circle, rgba(240, 221, 213, .5) 0%, transparent 70%);
-        }
+    .hero-circle-bl {
+      background: radial-gradient(circle, rgba(240, 221, 213, .5) 0%, transparent 70%);
+    }
 
-        .divider-line {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(to right, rgba(201, 137, 122, .4), transparent);
-        }
+    /* Divider */
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(201, 137, 122, .4), transparent);
+    }
 
-        .card-img img {
-            transition: transform .35s cubic-bezier(.4, 0, .2, 1);
-        }
+    /* Card hover */
+    .card-img img {
+      transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+    }
 
-        .card-wrap:hover .card-img img {
-            transform: scale(1.06);
-        }
+    .card-wrap:hover .card-img img {
+      transform: scale(1.06);
+    }
 
-        .card-wrap {
-            transition: transform .35s cubic-bezier(.4, 0, .2, 1), box-shadow .35s cubic-bezier(.4, 0, .2, 1);
-        }
+    .card-wrap {
+      transition: transform .35s cubic-bezier(.4, 0, .2, 1), box-shadow .35s cubic-bezier(.4, 0, .2, 1);
+    }
 
-        .card-wrap:hover {
-            transform: translateY(-8px) scale(1.012);
-        }
+    .card-wrap:hover {
+      transform: translateY(-8px) scale(1.012);
+    }
 
-        .btn-book,
-        .btn-buy {
-            transition: background .35s cubic-bezier(.4, 0, .2, 1), transform .35s cubic-bezier(.4, 0, .2, 1);
-        }
+    /* Buttons */
+    .btn-book,
+    .btn-buy {
+      transition: background .3s ease, transform .3s ease;
+    }
 
-        .btn-book:hover,
-        .btn-buy:hover {
-            transform: scale(1.04);
-        }
+    .btn-book:hover,
+    .btn-buy:hover {
+      transform: scale(1.04);
+    }
 
-        .hero-cta {
-            transition: background .35s cubic-bezier(.4, 0, .2, 1), transform .35s cubic-bezier(.4, 0, .2, 1);
-        }
+    /* Hero CTA */
+    .hero-cta {
+      transition: background .3s ease, transform .3s ease;
+    }
 
-        .hero-cta:hover {
-            transform: translateY(-2px);
-        }
+    .hero-cta:hover {
+      transform: translateY(-2px);
+    }
 
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-    </style>
+    /* Scroll-triggered fade-up */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Filter tabs */
+    .filter-btn {
+      transition: all .25s ease;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: #2e2420;
+      color: #fff;
+    }
+
+    .filter-btn:not(.active):hover {
+      background: rgba(201, 137, 122, .15);
+      color: #a3655a;
+    }
+
+    /* Product card hidden state */
+    .product-card {
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .product-card.hidden-product {
+      display: none;
+    }
+
+    /* Mobile menu */
+    #mobile-menu {
+      transition: max-height .35s ease, opacity .35s ease;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    #mobile-menu.open {
+      max-height: 300px;
+      opacity: 1;
+    }
+
+    /* Accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    /* Colour swatches */
+    .swatch {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(46, 36, 32, .15);
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    /* Stock badge */
+    .stock-badge {
+      font-size: .68rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 500;
+      letter-spacing: .06em;
+    }
+  </style>
 </head>
 
 <body class="bg-cream text-ink min-h-screen">
 
-    <!-- Hidden SEO heading -->
-    <h1 class="sr-only">Braids_by_Kp – Hair Braiding Services and Luxury Wigs Catalog</h1>
+  <h1 class="sr-only">Braids_by_Kp – Hair Braiding Services and Luxury Wigs Catalog</h1>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 md:px-16 h-[68px]
-              bg-[rgba(250,247,242,.88)] backdrop-blur-md border-b border-rose/20">
-        <div class="font-display text-2xl font-semibold tracking-wide">
-            Braids_by_Kp
-        </div>
-        <ul class="hidden sm:flex gap-8 list-none">
-            <li><a href="#services"
-                    class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Services</a>
-            </li>
-            <li><a href="#wigs"
-                    class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Wigs</a>
-            </li>
-            <li><a href="#"
-                    class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Gallery</a>
-            </li>
-            <li><a href="#"
-                    class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Contact</a>
-            </li>
-        </ul>
-    </nav>
+  <!-- ─── Navigation ─── -->
+  <nav class="sticky top-0 z-50 bg-[rgba(250,247,242,.92)] backdrop-blur-md border-b border-rose/20">
+    <div class="flex items-center justify-between px-6 md:px-16 h-[68px]">
+      <div class="font-display text-2xl font-semibold tracking-wide">Braids_by_Kp</div>
 
-    <!-- Hero Section -->
-    <section
-        class="hero-bg relative overflow-hidden min-h-[520px] flex items-center justify-center text-center px-6 py-24">
-        <div class="hero-circle-tr absolute w-[560px] h-[560px] rounded-full -top-44 -right-28 pointer-events-none">
-        </div>
-        <div class="hero-circle-bl absolute w-[400px] h-[400px] rounded-full -bottom-36 -left-20 pointer-events-none">
-        </div>
-        <div class="relative z-10 max-w-2xl">
-            <div
-                class="inline-flex items-center gap-2 text-rose text-[.75rem] font-medium tracking-[.14em] uppercase mb-5">
-                <span class="block w-7 h-px bg-rose/60"></span>
-                Premium Braiding & Wig Boutique
-                <span class="block w-7 h-px bg-rose/60"></span>
-            </div>
-            <h2 class="font-display text-[clamp(2.8rem,6vw,5rem)] font-light leading-[1.1] text-ink mb-5">
-                Where every braid<br>tells a <em class="italic text-rose">story</em>
-            </h2>
-            <p class="text-taupe font-light text-lg leading-relaxed max-w-md mx-auto mb-8">
-                Expert braiding, styling, and a curated collection of luxury wigs for every look.
-            </p>
-            <a href="#services" class="hero-cta inline-flex items-center gap-2 bg-ink text-white rounded-full
+      <!-- Desktop links -->
+      <ul class="hidden sm:flex gap-8 list-none">
+        <li><a href="#services"
+            class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Services</a>
+        </li>
+        <li><a href="#wigs"
+            class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Hair
+            & Wigs</a></li>
+        <li><a href="#"
+            class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Gallery</a>
+        </li>
+        <li><a href="#footer"
+            class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" aria-label="Open menu" class="sm:hidden text-ink hover:text-rose transition-colors">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="sm:hidden px-6 pb-4 flex flex-col gap-4">
+      <a href="#services" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Services</a>
+      <a href="#wigs" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Hair & Wigs</a>
+      <a href="#" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Gallery</a>
+      <a href="#footer" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section
+    class="hero-bg relative overflow-hidden min-h-[520px] flex items-center justify-center text-center px-6 py-24">
+    <div class="hero-circle-tr absolute w-[560px] h-[560px] rounded-full -top-44 -right-28 pointer-events-none"></div>
+    <div class="hero-circle-bl absolute w-[400px] h-[400px] rounded-full -bottom-36 -left-20 pointer-events-none"></div>
+    <div class="relative z-10 max-w-2xl">
+      <div class="inline-flex items-center gap-2 text-rose text-[.75rem] font-medium tracking-[.14em] uppercase mb-5">
+        <span class="block w-7 h-px bg-rose/60"></span>
+        Premium Braiding & Wig Boutique
+        <span class="block w-7 h-px bg-rose/60"></span>
+      </div>
+      <h2 class="font-display text-[clamp(2.8rem,6vw,5rem)] font-light leading-[1.1] text-ink mb-5">
+        Where every braid<br>tells a <em class="italic text-rose">story</em>
+      </h2>
+      <p class="text-taupe font-light text-lg leading-relaxed max-w-md mx-auto mb-8">
+        Expert braiding, styling, and a curated collection of luxury human hair for every look.
+      </p>
+      <a href="#services" class="hero-cta inline-flex items-center gap-2 bg-ink text-white rounded-full
          px-9 py-3.5 text-[.85rem] font-medium tracking-widest uppercase hover:bg-rose-dark">
-                <i class="fa-regular fa-calendar text-xs"></i>
-                Explore Services
-            </a>
+        <i class="fa-regular fa-calendar text-xs"></i>
+        Explore Services
+      </a>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ─── HAIR SERVICES ─── -->
+    <div id="services" class="flex items-center gap-4 px-6 md:px-16 mt-14 mb-1">
+      <h2 class="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-normal whitespace-nowrap text-ink">Braiding & Hair
+        Services</h2>
+      <div class="divider-line"></div>
+    </div>
+
+    <section aria-label="Hair services"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-6 md:px-16 pt-6">
+
+      <!-- Box Braids -->
+      <article
+        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://www.byrdie.com/thmb/8bgjRMuk5bXrAKEE3ZL8E_e7aDU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/401848670_18428438776004078_6346569366682481281_n-f25e6ec087dc44708cf39abcc397e7dd.jpg"
+            alt="Box braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Classic</span>
         </div>
+        <div class="flex flex-col gap-2 p-6 flex-1">
+          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Box Braids</h3>
+          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Medium or small box braids, waist‑length, with
+            your choice of colour.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$120 <span
+                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram"></i> Book
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Knotless Braids -->
+      <article
+        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2023/07/7-medium-knotless-boho-box-braids.jpg?resize=879%2C1026&ssl=1"
+            alt="Knotless braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Trending</span>
+        </div>
+        <div class="flex flex-col gap-2 p-6 flex-1">
+          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Knotless Braids</h3>
+          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Pain‑free, natural look with less tension on
+            your scalp.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$150 <span
+                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram"></i> Book
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cornrows -->
+      <article
+        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://i.pinimg.com/originals/1a/d4/78/1ad4782500e9866fca91f0e2f23e695e.jpg"
+            alt="Cornrows" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Signature</span>
+        </div>
+        <div class="flex flex-col gap-2 p-6 flex-1">
+          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Cornrows</h3>
+          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Straight back, curved, or feed‑in designs to
+            suit any style.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$80 <span
+                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram"></i> Book
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fulani Braids -->
+      <article
+        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://braidhairstyles.com/wp-content/uploads/Image-of-Fulani-Twists-inspired-by-Fulani-Braids-Hairstyles.jpg"
+            alt="Fulani braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Bohemian</span>
+        </div>
+        <div class="flex flex-col gap-2 p-6 flex-1">
+          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Fulani Braids</h3>
+          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Side‑swept with beads or cuffs – boho elegance
+            redefined.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$130 <span
+                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram"></i> Book
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Crochet Braids -->
+      <article
+        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://www.essence.com/wp-content/uploads/2016/10/1476389852/Screen%20Shot%202016-10-13%20at%2010.10.14%20AM.jpg"
+            alt="Crochet braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Express</span>
+        </div>
+        <div class="flex flex-col gap-2 p-6 flex-1">
+          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Crochet Braids</h3>
+          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Fast installation, many curl patterns and
+            textures available.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$95 <span
+                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram"></i> Book
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Braid Take Down + Wash -->
+      <article
+        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Braid takedown and wash" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Maintenance</span>
+        </div>
+        <div class="flex flex-col gap-2 p-6 flex-1">
+          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Braid Take Down + Wash</h3>
+          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Gentle removal, deep cleanse, and nourishing
+            scalp treatment.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$55 <span
+                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram"></i> Book
+            </a>
+          </div>
+        </div>
+      </article>
+
     </section>
 
-    <!-- ========== HAIR SERVICES SECTION (unchanged) ========== -->
-    <div id="services" class="flex items-center gap-4 px-6 md:px-16 mt-14 mb-1">
-        <h2 class="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-normal whitespace-nowrap text-ink">Braiding & Hair
-            Services</h2>
-        <div class="divider-line"></div>
+    <!-- ─── HAIR & WIGS CATALOG ─── -->
+    <div id="wigs" class="flex items-center gap-4 px-6 md:px-16 mt-20 mb-4">
+      <h2 class="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-normal whitespace-nowrap text-ink">Human Hair Curls
+        &amp; Bundles</h2>
+      <div class="divider-line"></div>
+      <span class="text-xs font-medium text-rose-dark bg-rose/10 px-3 py-1 rounded-full whitespace-nowrap">22 in
+        stock</span>
     </div>
 
-    <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-6 md:px-16 pt-6">
-        <!-- Box Braids -->
-        <article
-            class="card-wrap animate-fade-up-1 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://www.byrdie.com/thmb/8bgjRMuk5bXrAKEE3ZL8E_e7aDU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/401848670_18428438776004078_6346569366682481281_n-f25e6ec087dc44708cf39abcc397e7dd.jpg"
-                    alt="Box braids" loading="lazy" class="w-full h-50 object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Classic</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Box Braids</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Medium or small box braids, waist‑length,
-                    with your choice of colour.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$120 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Book on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Knotless Braids -->
-        <article
-            class="card-wrap animate-fade-up-2 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2023/07/7-medium-knotless-boho-box-braids.jpg?resize=879%2C1026&ssl=1"
-                    alt="Knotless braids" loading="lazy" class="w-full h-50 object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Trending</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Knotless Braids</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Pain‑free, natural look with less
-                    tension.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$150 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Book on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Cornrows -->
-        <article
-            class="card-wrap animate-fade-up-3 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://i.pinimg.com/originals/1a/d4/78/1ad4782500e9866fca91f0e2f23e695e.jpg"
-                    alt="Cornrows" loading="lazy" class="w-full h-50 object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Signature</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Cornrows</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Straight back, curved, or feed‑in
-                    designs.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$80 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Book on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Fulani Braids -->
-        <article
-            class="card-wrap animate-fade-up-4 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://braidhairstyles.com/wp-content/uploads/Image-of-Fulani-Twists-inspired-by-Fulani-Braids-Hairstyles.jpg"
-                    alt="Fulani braids" loading="lazy" class="w-full h-50 object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Bohemian</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Fulani Braids</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Side‑swept with beads or cuffs – boho
-                    elegance.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$130 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Book on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Crochet Braids -->
-        <article
-            class="card-wrap animate-fade-up-5 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://www.essence.com/wp-content/uploads/2016/10/1476389852/Screen%20Shot%202016-10-13%20at%2010.10.14%20AM.jpg"
-                    alt="Crochet braids" loading="lazy" class="w-full h-50 object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Express</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Crochet Braids</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Fast installation, many curl patterns
-                    available.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$95 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Book on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Braid Take Down + Wash -->
-        <article
-            class="card-wrap animate-fade-up-6 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
-                    alt="Braid takedown" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Maintenance</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Braid Take Down + Wash</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Gentle removal, deep cleanse, and scalp
-                    treatment.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$55 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Book on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-    </main>
-
-    <!-- ========== WIGS CATALOG SECTION – 22 identical miracle knots ========== -->
-    <div id="wigs" class="flex items-center gap-4 px-6 md:px-16 mt-20 mb-1">
-        <h2 class="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-normal whitespace-nowrap text-ink">Miracle Knots
-            Crochet Human Hair</h2>
-        <div class="divider-line"></div>
-        <span class="text-xs font-medium text-rose-dark bg-rose/10 px-3 py-1 rounded-full">22 packs available</span>
+    <!-- Filter bar -->
+    <div class="px-6 md:px-16 mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter products">
+      <button data-filter="all"
+        class="filter-btn active text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full border border-rose/20 text-ink">All</button>
+      <button data-filter="deep-wave"
+        class="filter-btn text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full border border-rose/20 text-taupe">Deep
+        Wave</button>
+      <button data-filter="body-wave"
+        class="filter-btn text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full border border-rose/20 text-taupe">Body
+        Wave</button>
+      <button data-filter="miracle"
+        class="filter-btn text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full border border-rose/20 text-taupe">Miracle
+        Knots</button>
     </div>
 
-    <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-6 md:px-16 pt-6 pb-24">
-        <!-- Loop generating 22 identical cards (using repeated HTML with dynamic animation classes) -->
-        <!-- Card 1 -->
-        <article
-            class="card-wrap animate-fade-up-1 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 2 -->
-        <article
-            class="card-wrap animate-fade-up-2 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 3 -->
-        <article
-            class="card-wrap animate-fade-up-3 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 4 -->
-        <article
-            class="card-wrap animate-fade-up-4 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 5 -->
-        <article
-            class="card-wrap animate-fade-up-5 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 6 -->
-        <article
-            class="card-wrap animate-fade-up-6 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 7 -->
-        <article
-            class="card-wrap animate-fade-up-7 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 8 -->
-        <article
-            class="card-wrap animate-fade-up-8 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 9 -->
-        <article
-            class="card-wrap animate-fade-up-1 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 10 -->
-        <article
-            class="card-wrap animate-fade-up-2 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 11 -->
-        <article
-            class="card-wrap animate-fade-up-3 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 12 -->
-        <article
-            class="card-wrap animate-fade-up-4 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 13 -->
-        <article
-            class="card-wrap animate-fade-up-5 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 14 -->
-        <article
-            class="card-wrap animate-fade-up-6 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 15 -->
-        <article
-            class="card-wrap animate-fade-up-7 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 16 -->
-        <article
-            class="card-wrap animate-fade-up-8 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 17 -->
-        <article
-            class="card-wrap animate-fade-up-1 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 18 -->
-        <article
-            class="card-wrap animate-fade-up-2 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 19 -->
-        <article
-            class="card-wrap animate-fade-up-3 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Miracle Knots Crochet Human
-                    Hair</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 20 -->
-        <article
-            class="card-wrap animate-fade-up-4 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://m.media-amazon.com/images/I/81rYWi1g6uL._AC_.jpg"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-50 object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Body wave human hair curls 20-22 inches</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 21 -->
-        <article
-            class="card-wrap animate-fade-up-5 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Body wave human hair curls 20-22 inches</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed"> Colour highlight mixed: colour brown and honey blonde #4&#27
-                100g Deep wave, 20-22 inch, colour black. 1
-                    pack = 65-70€. Soft, natural, long-lasting.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€65-70 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-        <!-- Card 22 -->
-        <article
-            class="card-wrap animate-fade-up-6 bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-            <div class="card-img relative overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
-                    alt="Deep wave crochet human hair" loading="lazy" class="w-full h-full object-cover" />
-                <span
-                    class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
-                    Wave</span>
-            </div>
-            <div class="flex flex-col gap-2 p-6 flex-1">
-                <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Lose deep wave human hair curls 20-22 inches</h3>
-                <p class="text-taupe text-[.85rem] font-light leading-relaxed">Colour highlight mixed: colour brown and honey blonde #4&#27.</p>
-                <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-                    <div class="font-display text-[1.6rem] font-semibold text-rose-dark">€75 <span
-                            class="font-body text-[.78rem] font-normal text-taupe">/ pack</span></div>
-                    <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-                        class="btn-buy flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-                        <i class="fa-brands fa-instagram"></i> Buy on Instagram
-                    </a>
-                </div>
-            </div>
-        </article>
-    </main>
+    <section aria-label="Hair products catalog"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-6 md:px-16 pt-2 pb-24" id="products-grid">
 
-    <!-- Footer -->
-    <footer class="bg-ink text-white/40 text-center py-9 px-6 text-[.8rem] tracking-wide">
-        © 2025 <strong class="text-white/80 font-medium">Braids_by_Kp</strong> — All rights reserved &nbsp;·&nbsp;
-        <i class="fa-solid fa-location-dot"></i> 14 Rose Lane, Lagos &nbsp;·&nbsp;
-        <i class="fa-solid fa-phone"></i> +234 800 000 0000
-    </footer>
+      <!-- 1 – Loose Deep Wave / Honey Brown #30 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="deep-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://m.media-amazon.com/images/I/71ZSFszK0HL._SL1000_.jpg"
+            alt="Loose deep wave honey brown hair" loading="lazy" width="600" height="450"
+            class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Honey Brown <span
+              class="swatch" style="background:#c8832a"></span>#30</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Soft, bouncy curls with a warm caramel finish.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
 
+      <!-- 2 – Loose Deep Wave / Black #1b -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="deep-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://i5.walmartimages.com/seo/Ustar-Brazilian-Virigin-Remy-100-Human-Hair-Weave-Deep-Wave-Natural-Black-Color-1B-26-28-30-INCH-3-Bundles_5813e0e4-c533-4497-8697-d56f4044feeb.ac42865691b78aa480d64d1082c9ec13.jpeg"
+            alt="Loose deep wave black hair" loading="lazy" width="600" height="450"
+            class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Black <span class="swatch"
+              style="background:#1a1108"></span>#1b</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Natural shine, lightweight feel, effortless movement.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 – Loose Deep Wave / Honey Blonde #27 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="deep-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://m.media-amazon.com/images/I/71meUDvLmEL._SL1000_.jpg"
+            alt="Loose deep wave honey blonde hair" loading="lazy" width="600" height="450"
+            class="w-full h-50 object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Honey Blonde <span
+              class="swatch" style="background:#d4a84b"></span>#27</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Warm, radiant golden tone for a sunlit look.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€73 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 – Loose Deep Wave / Dark Brown #4 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="deep-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Loose deep wave dark brown hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Dark Brown <span
+              class="swatch" style="background:#3b2012"></span>#4</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Rich, deep shade with a naturally glossy finish.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 – Loose Deep Wave / Honey Brown #30 (73€ variant) -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="deep-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Loose deep wave honey brown hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Honey Brown <span
+              class="swatch" style="background:#c8832a"></span>#30 · Premium grade</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Versatile everyday luxury, holds styles beautifully.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€73 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 – Loose Deep Wave / Blonde #613 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="deep-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Loose deep wave blonde hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Blonde <span class="swatch"
+              style="background:#e8d08a"></span>#613</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Icy platinum finish — a true statement shade.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 – Loose Deep Wave Highlight Mix #4&#27 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="deep-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Loose deep wave highlight mix hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Highlight
+            Mix</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Highlight Mix</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Brown &amp; Honey Blonde
+            <span class="swatch" style="background:#3b2012"></span><span class="swatch"
+              style="background:#d4a84b"></span>#4/#27</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Dimensional, sun-kissed highlights woven through.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 – Body Wave / Black -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="body-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Body wave black hair" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Body Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Black <span class="swatch"
+              style="background:#1a1108"></span>#1b</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Classic, versatile wave for everyday glamour.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9 – Body Wave / Honey Blonde #27 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="body-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Body wave honey blonde hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Body Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Honey Blonde <span
+              class="swatch" style="background:#d4a84b"></span>#27</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Light, breezy curls with a golden warmth.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10 – Body Wave / Dark Brown #4 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="body-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Body wave dark brown hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Body Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Dark Brown <span
+              class="swatch" style="background:#3b2012"></span>#4</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Rich, natural depth — works beautifully in braids.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11 – Body Wave / Honey Brown #30 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="body-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Body wave honey brown hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
+            Wave</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Body Wave Human Hair</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Honey Brown <span
+              class="swatch" style="background:#c8832a"></span>#30</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Warm caramel tone, soft flowing movement.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€73 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12 – Body Wave / Ginger #350 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="body-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Body wave ginger hair" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Ginger</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Body Wave Human Hair (Ginger)</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Ginger <span class="swatch"
+              style="background:#b5410a"></span>#350</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Bold, fiery copper — a true head-turner.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 13 – Body Wave / Blonde #613 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="body-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Body wave blonde hair" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Blonde</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Body Wave Human Hair (Blonde)</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Blonde <span class="swatch"
+              style="background:#e8d08a"></span>#613</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Platinum statement piece — effortlessly striking.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 14 – Body Wave Highlight Mix #4/#27 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="body-wave">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Body wave highlight mix hair" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Highlight
+            Mix</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Body Wave Highlight Mix</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Brown &amp; Honey Blonde
+            <span class="swatch" style="background:#3b2012"></span><span class="swatch"
+              style="background:#d4a84b"></span>#4/#27</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Sunlit blend — natural dimension in every wave.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 15 – Miracle Knots / Deep Wave Black -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots deep wave black" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots Crochet (Deep Wave)
+          </h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · Black <span class="swatch"
+              style="background:#1a1108"></span>#1b · Pre-looped</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Tangle-free, easy crochet install. Natural movement.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€65–70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 16 – Miracle Knots / Body Wave Black -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots body wave" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots Crochet (Body Wave)
+          </h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · Black <span class="swatch"
+              style="background:#1a1108"></span>#1b · Pre-looped</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Soft, flowing waves — quick and painless install.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70–80 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 17 – Miracle Knots / Straight Black -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots straight" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots Crochet (Straight)
+          </h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">Black <span class="swatch"
+              style="background:#1a1108"></span>#1b · Sleek &amp; smooth · Pre-looped</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Clean, polished finish — fast and easy to install.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€60–70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 18 – Miracle Knots / Deep Curly Black -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots deep curly" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots Crochet (Deep Curly)
+          </h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">Black <span class="swatch"
+              style="background:#1a1108"></span>#1b · Tight defined curls</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Full volume, springy coils — pre-looped for speed.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€65–70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 19 – Miracle Knots / Kinky Straight Black -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots kinky straight" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots Crochet (Kinky
+            Straight)</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">Black <span class="swatch"
+              style="background:#1a1108"></span>#1b · Natural texture blend</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Authentic afro-textured finish. Lightweight &amp; full.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70–80 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 20 – Miracle Knots / Jerry Curly Black -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots jerry curly" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots Crochet (Jerry
+            Curly)</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">Black <span class="swatch"
+              style="background:#1a1108"></span>#1b · Springy corkscrew curls</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Bouncy, defined coils — pre-looped for quick install.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70–80 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 21 – Miracle Knots / Deep Wave Honey Brown #30 -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots deep wave honey brown" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots (Deep Wave · Brown)
+          </h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · Honey Brown <span class="swatch"
+              style="background:#c8832a"></span>#30 · Pre-looped</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Warm, romantic waves with zero-knot comfort.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€70 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 22 – Miracle Knots / Deep Wave Highlight Mix -->
+      <article
+        class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
+        data-type="miracle">
+        <div class="card-img relative overflow-hidden aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1583244685026-851c62d0a2e9?w=600&q=80&auto=format&fit=crop"
+            alt="Miracle knots highlight mix" loading="lazy" width="600" height="450"
+            class="w-full h-full object-cover" />
+          <span
+            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Miracle
+            Knots</span>
+        </div>
+        <div class="flex flex-col gap-2 p-5 flex-1">
+          <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Miracle Knots (Deep Wave ·
+            Highlight)</h3>
+          <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · Brown &amp; Honey Blonde <span
+              class="swatch" style="background:#3b2012"></span><span class="swatch"
+              style="background:#d4a84b"></span>#4/#27</p>
+          <p class="text-taupe text-[.8rem] leading-relaxed">Dimensional highlights, effortless crochet install.</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
+            <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
+                class="font-body text-[.75rem] font-normal text-taupe">/ pack</span></div>
+            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
+              class="btn-buy flex items-center gap-1.5 bg-rose text-white rounded-full px-4 py-2 text-[.78rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
+              <i class="fa-brands fa-instagram text-xs"></i> Buy
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer id="footer" class="bg-ink text-white/40 text-center py-9 px-6 text-[.8rem] tracking-wide">
+    © 2025 <strong class="text-white/80 font-medium">Braids_by_Kp</strong> — All rights reserved &nbsp;·&nbsp;
+    <i class="fa-solid fa-location-dot"></i> 14 Rose Lane, Lagos &nbsp;·&nbsp;
+    <i class="fa-solid fa-phone"></i> +234 800 000 0000
+  </footer>
+
+  <script>
+    // ── Mobile menu toggle ──────────────────────────────────────────
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // ── IntersectionObserver – scroll-triggered fade-up ─────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger delay based on position in visible batch
+          const delay = (Array.from(entry.target.parentElement.children)
+            .filter(c => c.classList.contains('reveal'))
+            .indexOf(entry.target) % 6) * 80;
+          entry.target.style.transitionDelay = delay + 'ms';
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── Filter tabs ─────────────────────────────────────────────────
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active state
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Show/hide cards
+        productCards.forEach(card => {
+          const match = filter === 'all' || card.dataset.type === filter;
+          if (match) {
+            card.classList.remove('hidden-product');
+            // Re-trigger reveal if not yet visible
+            if (!card.classList.contains('visible')) {
+              revealObserver.observe(card);
+            }
+          } else {
+            card.classList.add('hidden-product');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
