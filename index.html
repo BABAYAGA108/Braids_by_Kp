@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Braids_by_Kp – Hair Services & Wigs</title>
+  <title>Braids_by_Kp – Human Hair Curls &amp; Bundles</title>
   <meta name="description"
-    content="Premium braiding, hair services and luxury wigs by Braids_by_Kp. Book your appointment or shop wigs online." />
+    content="Premium human hair curls, bundles and luxury wigs by Braids_by_Kp. Shop deep wave, body wave and more." />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="image/fav.png" class="w-full"/>
+  <link rel="icon" type="image/png" href="image/fav.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet" />
@@ -86,12 +86,10 @@
     }
 
     /* Buttons */
-    .btn-book,
     .btn-buy {
       transition: background .3s ease, transform .3s ease;
     }
 
-    .btn-book:hover,
     .btn-buy:hover {
       transform: scale(1.04);
     }
@@ -178,20 +176,16 @@
       margin-right: 4px;
     }
 
-    /* Stock badge */
-    .stock-badge {
-      font-size: .68rem;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-weight: 500;
-      letter-spacing: .06em;
+    /* Custom height */
+    .h-50 {
+      height: 12.5rem;
     }
   </style>
 </head>
 
 <body class="bg-cream text-ink min-h-screen">
 
-  <h1 class="sr-only">Braids_by_Kp – Hair Braiding Services and Luxury Wigs Catalog</h1>
+  <h1 class="sr-only">Braids_by_Kp – Human Hair Curls, Bundles &amp; Luxury Wigs Catalog</h1>
 
   <!-- ─── Navigation ─── -->
   <nav class="sticky top-0 z-50 bg-[rgba(250,247,242,.92)] backdrop-blur-md border-b border-rose/20">
@@ -200,12 +194,9 @@
 
       <!-- Desktop links -->
       <ul class="hidden sm:flex gap-8 list-none">
-        <li><a href="#services"
-            class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Services</a>
-        </li>
         <li><a href="#wigs"
             class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Hair
-            & Wigs</a></li>
+            &amp; Wigs</a></li>
         <li><a href="#"
             class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose transition-colors duration-300">Gallery</a>
         </li>
@@ -222,8 +213,8 @@
 
     <!-- Mobile dropdown -->
     <div id="mobile-menu" class="sm:hidden px-6 pb-4 flex flex-col gap-4">
-      <a href="#services" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Services</a>
-      <a href="#wigs" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Hair & Wigs</a>
+      <a href="#wigs" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Hair &amp;
+        Wigs</a>
       <a href="#" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Gallery</a>
       <a href="#footer" class="text-xs font-medium tracking-widest uppercase text-taupe hover:text-rose">Contact</a>
     </div>
@@ -237,160 +228,27 @@
     <div class="relative z-10 max-w-2xl">
       <div class="inline-flex items-center gap-2 text-rose text-[.75rem] font-medium tracking-[.14em] uppercase mb-5">
         <span class="block w-7 h-px bg-rose/60"></span>
-        Premium Braiding & Wig Boutique
+        Premium Human Hair Boutique
         <span class="block w-7 h-px bg-rose/60"></span>
       </div>
       <h2 class="font-display text-[clamp(2.8rem,6vw,5rem)] font-light leading-[1.1] text-ink mb-5">
-        Where every braid<br>tells a <em class="italic text-rose">story</em>
+        Where every strand<br>tells a <em class="italic text-rose">story</em>
       </h2>
       <p class="text-taupe font-light text-lg leading-relaxed max-w-md mx-auto mb-8">
-        Expert braiding, styling, and a curated collection of luxury human hair for every look.
+        A curated collection of luxury human hair — deep wave, body wave and more — for every look.
       </p>
-      <a href="#services" class="hero-cta inline-flex items-center gap-2 bg-ink text-white rounded-full
+      <a href="#wigs" class="hero-cta inline-flex items-center gap-2 bg-ink text-white rounded-full
          px-9 py-3.5 text-[.85rem] font-medium tracking-widest uppercase hover:bg-rose-dark">
-        <i class="fa-regular fa-calendar text-xs"></i>
-        Explore Services
+        <i class="fa-solid fa-bag-shopping text-xs"></i>
+        Shop Hair &amp; Wigs
       </a>
     </div>
   </section>
 
   <main>
 
-    <!-- ─── HAIR SERVICES ─── -->
-    <div id="services" class="flex items-center gap-4 px-6 md:px-16 mt-14 mb-1">
-      <h2 class="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-normal whitespace-nowrap text-ink">Braiding & Hair
-        Services</h2>
-      <div class="divider-line"></div>
-    </div>
-
-    <section aria-label="Hair services"
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-6 md:px-16 pt-6">
-
-      <!-- Box Braids -->
-      <article
-        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-        <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://www.byrdie.com/thmb/8bgjRMuk5bXrAKEE3ZL8E_e7aDU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/401848670_18428438776004078_6346569366682481281_n-f25e6ec087dc44708cf39abcc397e7dd.jpg"
-            alt="Box braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
-          <span
-            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Classic</span>
-        </div>
-        <div class="flex flex-col gap-2 p-6 flex-1">
-          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Box Braids</h3>
-          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Medium or small box braids, waist‑length, with
-            your choice of colour.</p>
-          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$120 <span
-                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-              <i class="fa-brands fa-instagram"></i> Book
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Knotless Braids -->
-      <article
-        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-        <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2023/07/7-medium-knotless-boho-box-braids.jpg?resize=879%2C1026&ssl=1"
-            alt="Knotless braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
-          <span
-            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Trending</span>
-        </div>
-        <div class="flex flex-col gap-2 p-6 flex-1">
-          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Knotless Braids</h3>
-          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Pain‑free, natural look with less tension on
-            your scalp.</p>
-          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$150 <span
-                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-              <i class="fa-brands fa-instagram"></i> Book
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Cornrows -->
-      <article
-        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-        <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://i.pinimg.com/originals/1a/d4/78/1ad4782500e9866fca91f0e2f23e695e.jpg"
-            alt="Cornrows" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
-          <span
-            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Signature</span>
-        </div>
-        <div class="flex flex-col gap-2 p-6 flex-1">
-          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Cornrows</h3>
-          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Straight back, curved, or feed‑in designs to
-            suit any style.</p>
-          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$80 <span
-                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-              <i class="fa-brands fa-instagram"></i> Book
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Fulani Braids -->
-      <article
-        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-        <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://braidhairstyles.com/wp-content/uploads/Image-of-Fulani-Twists-inspired-by-Fulani-Braids-Hairstyles.jpg"
-            alt="Fulani braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
-          <span
-            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Bohemian</span>
-        </div>
-        <div class="flex flex-col gap-2 p-6 flex-1">
-          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Fulani Braids</h3>
-          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Side‑swept with beads or cuffs – boho elegance
-            redefined.</p>
-          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$130 <span
-                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-              <i class="fa-brands fa-instagram"></i> Book
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Crochet Braids -->
-      <article
-        class="reveal card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10">
-        <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://www.essence.com/wp-content/uploads/2016/10/1476389852/Screen%20Shot%202016-10-13%20at%2010.10.14%20AM.jpg"
-            alt="Crochet braids" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
-          <span
-            class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Express</span>
-        </div>
-        <div class="flex flex-col gap-2 p-6 flex-1">
-          <h3 class="font-display text-[1.45rem] font-semibold leading-tight text-ink">Crochet Braids</h3>
-          <p class="text-taupe text-[.85rem] font-light leading-relaxed">Fast installation, many curl patterns and
-            textures available.</p>
-          <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
-            <div class="font-display text-[1.6rem] font-semibold text-rose-dark">$95 <span
-                class="font-body text-[.78rem] font-normal text-taupe">/ session</span></div>
-            <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
-              class="btn-book flex items-center gap-2 bg-rose text-white rounded-full px-5 py-2.5 text-[.8rem] font-medium tracking-wide uppercase hover:bg-rose-dark">
-              <i class="fa-brands fa-instagram"></i> Book
-            </a>
-          </div>
-        </div>
-      </article>
-
-
-    </section>
-
     <!-- ─── HAIR & WIGS CATALOG ─── -->
-    <div id="wigs" class="flex items-center gap-4 px-6 md:px-16 mt-20 mb-4">
+    <div id="wigs" class="flex items-center gap-4 px-6 md:px-16 mt-14 mb-4">
       <h2 class="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-normal whitespace-nowrap text-ink">Human Hair Curls
         &amp; Bundles</h2>
       <div class="divider-line"></div>
@@ -408,9 +266,6 @@
       <button data-filter="body-wave"
         class="filter-btn text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full border border-rose/20 text-taupe">Body
         Wave</button>
-      <button data-filter="miracle"
-        class="filter-btn text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full border border-rose/20 text-taupe">Miracle
-        Knots</button>
     </div>
 
     <section aria-label="Hair products catalog"
@@ -421,9 +276,10 @@
         class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
         data-type="deep-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://th.bing.com/th/id/R.df0b0a0c9c0d749bdac8f69aec989e6d?rik=Zn%2bUGSr9i%2b45OA&riu=http%3a%2f%2fipfhair.com%2fcdn%2fshop%2ffiles%2f4_27_30_braiding_hair.webp%3fv%3d1733673645%26width%3d600&ehk=t%2fknRmDJlqoghTDyUKnoSHKZ0ks6UYDDoxz52BLDsqw%3d&risl=&pid=ImgRaw&r=0"
+          <img
+            src="https://th.bing.com/th/id/R.df0b0a0c9c0d749bdac8f69aec989e6d?rik=Zn%2bUGSr9i%2b45OA&riu=http%3a%2f%2fipfhair.com%2fcdn%2fshop%2ffiles%2f4_27_30_braiding_hair.webp%3fv%3d1733673645%26width%3d600&ehk=t%2fknRmDJlqoghTDyUKnoSHKZ0ks6UYDDoxz52BLDsqw%3d&risl=&pid=ImgRaw&r=0"
             alt="Loose deep wave honey brown hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+            class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
             Wave</span>
@@ -449,9 +305,8 @@
         class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
         data-type="deep-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://m.media-amazon.com/images/I/81464AteenL._AC_.jpg"
-            alt="Loose deep wave black hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+          <img src="https://m.media-amazon.com/images/I/81464AteenL._AC_.jpg" alt="Loose deep wave black hair"
+            loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
             Wave</span>
@@ -478,9 +333,8 @@
         data-type="deep-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
           <img src="https://m.media-amazon.com/images/I/81LR4vHl1aL._SL1500_.jpg"
-        
             alt="Loose deep wave honey blonde hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+            class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
             Wave</span>
@@ -508,7 +362,7 @@
         <div class="card-img relative overflow-hidden aspect-[4/3]">
           <img src="https://i.pinimg.com/736x/08/0c/af/080cafa6eff81d9a64efdc6053404ac3.jpg"
             alt="Loose deep wave dark brown hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+            class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
             Wave</span>
@@ -529,14 +383,13 @@
         </div>
       </article>
 
-      <!-- 5 – Loose Deep Wave / Honey Brown #30 (73€ variant) -->
+      <!-- 5 – Loose Deep Wave / Honey Brown #30 (Premium) -->
       <article
         class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
         data-type="deep-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://m.media-amazon.com/images/I/61YIQcseYVL.jpg"
-            alt="Loose deep wave honey brown hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+          <img src="https://m.media-amazon.com/images/I/61YIQcseYVL.jpg" alt="Loose deep wave honey brown premium hair"
+            loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
             Wave</span>
@@ -562,9 +415,8 @@
         class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
         data-type="deep-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://m.media-amazon.com/images/I/51F3nOHcfRL._SL500_.jpg"
-            alt="Loose deep wave blonde hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+          <img src="https://m.media-amazon.com/images/I/51F3nOHcfRL._SL500_.jpg" alt="Loose deep wave blonde hair"
+            loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Deep
             Wave</span>
@@ -585,14 +437,14 @@
         </div>
       </article>
 
-      <!-- 7 – Loose Deep Wave Highlight Mix #4&#27 -->
+      <!-- 7 – Loose Deep Wave Highlight Mix #4/#27 -->
       <article
         class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
         data-type="deep-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
           <img src="https://tse1.explicit.bing.net/th/id/OIP.E8K13SoikLHstLGLfWc6sgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
             alt="Loose deep wave highlight mix hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+            class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Highlight
             Mix</span>
@@ -601,7 +453,8 @@
           <h3 class="font-display text-[1.3rem] font-semibold leading-tight text-ink">Loose Deep Wave Highlight Mix</h3>
           <p class="text-taupe text-[.82rem] font-light leading-relaxed">20–22 inch · 100g · Brown &amp; Honey Blonde
             <span class="swatch" style="background:#3b2012"></span><span class="swatch"
-              style="background:#d4a84b"></span>#4/#27</p>
+              style="background:#d4a84b"></span>#4/#27
+          </p>
           <p class="text-taupe text-[.8rem] leading-relaxed">Dimensional, sun-kissed highlights woven through.</p>
           <div class="flex items-center justify-between mt-auto pt-4 border-t border-rose/10">
             <div class="font-display text-[1.5rem] font-semibold text-rose-dark">€75 <span
@@ -614,13 +467,13 @@
         </div>
       </article>
 
-      <!-- 8 – Body Wave / Black -->
+      <!-- 8 – Body Wave / Black #1b -->
       <article
         class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
         data-type="body-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://m.media-amazon.com/images/I/71AUnF3xGGL._SL1500_.jpg"
-            alt="Body wave black hair" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+          <img src="https://m.media-amazon.com/images/I/71AUnF3xGGL._SL1500_.jpg" alt="Body wave black hair"
+            loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
             Wave</span>
@@ -646,9 +499,10 @@
         class="reveal product-card card-wrap bg-white rounded-[18px] shadow-card hover:shadow-card-hover overflow-hidden flex flex-col border border-rose/10"
         data-type="body-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
-          <img src="https://tse1.mm.bing.net/th/id/OIP.jw4HRDWBUdNAGj8orvD54AHaHa?w=1080&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3"
+          <img
+            src="https://tse1.mm.bing.net/th/id/OIP.jw4HRDWBUdNAGj8orvD54AHaHa?w=1080&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3"
             alt="Body wave honey blonde hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+            class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
             Wave</span>
@@ -675,8 +529,7 @@
         data-type="body-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
           <img src="https://www.eayonhair.com/cdn/shop/files/4-body-wave-human-braiding-hair.jpg?v=1721195907&width=720"
-            alt="Body wave dark brown hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+            alt="Body wave dark brown hair" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
             Wave</span>
@@ -703,8 +556,7 @@
         data-type="body-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
           <img src="https://tse2.mm.bing.net/th/id/OIP.jQaKLxHm6yC1vFtOLs07PwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Body wave honey brown hair" loading="lazy" width="600" height="450"
-            class="w-full h-50 object-cover" />
+            alt="Body wave honey brown hair" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Body
             Wave</span>
@@ -731,7 +583,7 @@
         data-type="body-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
           <img src="https://tse1.mm.bing.net/th/id/OIP.nljQ4P2qVyrRJrZi_5PRsAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Body wave ginger hair" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+            alt="Body wave ginger hair" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Ginger</span>
         </div>
@@ -757,7 +609,7 @@
         data-type="body-wave">
         <div class="card-img relative overflow-hidden aspect-[4/3]">
           <img src="https://tse1.mm.bing.net/th/id/OIP.ncfRLoFj6xVmPO9XVYKgaQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Body wave blonde hair" loading="lazy" width="600" height="450" class="w-full h-50 object-cover" />
+            alt="Body wave blonde hair" loading="lazy" width="600" height="450" class="w-full h-full object-cover" />
           <span
             class="absolute top-3 left-3 bg-cream/90 backdrop-blur text-rose-dark text-[.7rem] font-medium tracking-[.1em] uppercase px-3 py-1 rounded-full border border-rose/20">Blonde</span>
         </div>
@@ -777,14 +629,14 @@
         </div>
       </article>
 
-      
     </section>
   </main>
 
   <!-- ─── Footer ─── -->
   <footer id="footer" class="bg-ink text-white/40 text-center py-9 px-6 text-[.8rem] tracking-wide">
-    © 2026 <strong class="text-white/80 font-medium">Braids_by_Kp</strong> — All rights reserved &nbsp;·&nbsp;
-    <i class="fa-solid fa-location-dot"></i> Austria Vienna &nbsp;·&nbsp;
+    &copy; 2026 <strong class="text-white/80 font-medium">Braids_by_Kp</strong> — All rights reserved
+    &nbsp;&middot;&nbsp;
+    <i class="fa-solid fa-location-dot"></i> Austria Vienna &nbsp;&middot;&nbsp;
     <a href="https://www.instagram.com/braids_by_kp_vienna" target="_blank" rel="noopener noreferrer"
       class="underline underline-offset-4 text-white/80 hover:text-white transition-colors duration-200">Instagram</a>
   </footer>
@@ -796,19 +648,17 @@
     toggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');
     });
-    // Close on link click
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
     // ── IntersectionObserver – scroll-triggered fade-up ─────────────
     const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Stagger delay based on position in visible batch
-          const delay = (Array.from(entry.target.parentElement.children)
-            .filter(c => c.classList.contains('reveal'))
-            .indexOf(entry.target) % 6) * 80;
+          const siblings = Array.from(entry.target.parentElement.children)
+            .filter(c => c.classList.contains('reveal'));
+          const delay = (siblings.indexOf(entry.target) % 6) * 80;
           entry.target.style.transitionDelay = delay + 'ms';
           entry.target.classList.add('visible');
           revealObserver.unobserve(entry.target);
@@ -826,16 +676,13 @@
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
 
-        // Update active state
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        // Show/hide cards
         productCards.forEach(card => {
           const match = filter === 'all' || card.dataset.type === filter;
           if (match) {
             card.classList.remove('hidden-product');
-            // Re-trigger reveal if not yet visible
             if (!card.classList.contains('visible')) {
               revealObserver.observe(card);
             }
